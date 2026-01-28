@@ -1,4 +1,4 @@
-/* src/app/app.css */
+
 
 :host {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -8,10 +8,10 @@
   color: #2657a5;
 }
 
-/* Contenedor principal que se adapta al ancho */
+
 .container {
   width: 100%;
-  max-width: 1200px; /* En PC no se verá infinito hacia los lados */
+  max-width: 1200px; 
   margin: 0 auto;
   transition: all 0.3s ease;
 }
@@ -20,14 +20,14 @@ header {
   position: sticky;
   top: 0;
   background: rgba(34, 154, 234, 0.9);
-  backdrop-filter: blur(10px); /* Efecto moderno de transparencia */
+  backdrop-filter: blur(10px); 
   padding: 1.5rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   z-index: 100;
   text-align: center;
 }
 
-/* Resumen del total con diseño más limpio */
+
 .summary-card {
   margin-top: 1rem;
   padding: 1.5rem;
@@ -38,17 +38,15 @@ header {
 .summary-card.active { background-color: #b4d0c3; border: 1px solid #10b981; }
 .summary-card.empty { background-color: #f1f5f9; border: 1px solid #e2e8f0; }
 
-/* REJILLA RESPONSIVA MÁGICA 🪄 */
+
 .catalog {
   padding: 2rem;
   display: grid;
-  /* auto-fit: crea columnas automáticamente según el espacio disponible */
-  /* minmax: los items no bajan de 280px ni suben de 1 fracción del total */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
   gap: 2rem;
 }
 
-/* Tarjetas con efectos de hover (solo para PC) */
+
 .card {
   background: rgb(159, 157, 157);
   border-radius: 1.5rem;
@@ -60,7 +58,7 @@ header {
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Se eleva al pasar el mouse */
+  transform: translateY(-10px); 
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 }
 
@@ -77,7 +75,7 @@ header {
 }
 
 .card:hover img {
-  transform: scale(1.05); /* Zoom suave a la imagen */
+  transform: scale(1.05); 
 }
 
 .card-info {
@@ -95,10 +93,10 @@ header {
   border-top: 1px solid #f1f5f9;
 }
 
-/* Ajustes específicos para móviles muy pequeños */
+
 @media (max-width: 480px) {
   .catalog {
-    grid-template-columns: 1fr; /* Una sola columna en celulares mini */
+    grid-template-columns: 1fr; 
     padding: 1rem;
   }
   .card img { height: 160px; }
