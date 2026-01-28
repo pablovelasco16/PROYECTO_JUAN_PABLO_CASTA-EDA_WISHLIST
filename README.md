@@ -1,0 +1,1 @@
+"Lo más dificil fue dejar de usar las directivas estructurales clásicas como ngIf y ngFor para adoptar el nuevo @if / @for, lo cual hace que el código sea mucho más legible pero requiere acostumbrarse y cambiar la practica que uno como programador tiene con las sintaxis vieja y aprender de lleno la nueva ."
