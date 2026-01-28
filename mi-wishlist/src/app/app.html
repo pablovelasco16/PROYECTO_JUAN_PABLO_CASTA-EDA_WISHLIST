@@ -1,0 +1,40 @@
+<div class="container">
+  <header>
+    <h1>La Wishlist De Pabliño</h1>
+    @if (count() > 0) {
+      <div class="summary-card active">
+        <p>Items seleccionados: <strong>{{ count() }}</strong></p>
+        <h2>Total: {{ total() | currency:'USD' }}</h2>
+      </div>
+    } @else {
+      <div class="summary-card empty">
+        <p>lista vacía.</p>
+        <h2>Total: $0.00</h2>
+      </div>
+    }
+  </header>
+
+  <main class="catalog">
+    @for (product of products(); track product.id) {
+      <div 
+        class="card" 
+        [class.selected]="product.selected"
+        (click)="toggleItem(product.id)">
+        
+        <img [src]="product.image" [alt]="product.name">
+        <div class="card-info">
+          <h3>{{ product.name }}</h3>
+          <p class="price">{{ product.price | currency:'USD' }}</p>
+        </div>
+        
+        <div class="status-indicator">
+          @if (product.selected) {
+            ✅ Agregado
+          } @else {
+            ➕ Toca para agregar
+          }
+        </div>
+      </div>
+    }
+  </main>
+</div>
